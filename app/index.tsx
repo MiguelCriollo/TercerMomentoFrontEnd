@@ -7,7 +7,8 @@ import {
   Paragraph,
   Separator,
   YGroup,
-  YStack
+  YStack,
+    Image,
 } from "tamagui";
 
 import { MySafeAreaView } from "../components/MySafeAreaView";
@@ -17,24 +18,28 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <MySafeAreaView>
-      <MyStack>
+    <MySafeAreaView backgroundColor={"#350A24"}
+    >
+      <MyStack backgroundColor={"#350A24"}>
         <YStack
           space="$4"
           maxWidth={600}
         >
-          <H1 textAlign="center">Welcome to Tamagui.</H1>
-          <Paragraph textAlign="center">
-            Here&apos;s a basic starter to show navigating from one screen to
-            another.
-          </Paragraph>
+          <H1 textAlign="center">Movie Making</H1>
         </YStack>
-
+        <YStack>
+          <Image
+              source={{
+                uri: '../assets/Icon-Set-Filled.png',
+                width: 200,
+                height: 300,
+              }}
+          />
+        </YStack>
         <YStack space="$2.5">
-          <Button onPress={() => router.push("/users/testuser")}>
-            Go to user page
+          <Button backgroundColor={"#752D59"} onPress={() => router.push("/tabs")}>
+            Begin
           </Button>
-          <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
         </YStack>
 
         <YStack space="$5">

@@ -10,7 +10,7 @@ export default function Layout() {
       <Tabs.Screen
         name="tab1"
         options={{
-          title: "Tab 1",
+          title: "The GodFather Trilogy",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
@@ -31,30 +31,7 @@ export default function Layout() {
           }
         }}
       />
-      <Tabs.Screen
-        name="tab2"
-        options={{
-          title: "Tab 2",
-          tabBarIcon(props) {
-            return (
-              <MaterialCommunityIcons
-                name="two-factor-authentication"
-                {...props}
-              />
-            );
-          },
-          headerLeft() {
-            return (
-              <Button
-                ml="$2.5"
-                onPress={() => router.push("/")}
-              >
-                <MaterialCommunityIcons name="arrow-left" />
-              </Button>
-            );
-          }
-        }}
-      />
+
     </Tabs>
   );
 }

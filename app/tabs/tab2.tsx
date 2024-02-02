@@ -6,7 +6,7 @@ export default function Tab2() {
   return (
     <MyStack>
       <Tabs
-        defaultValue="tab1"
+        defaultValue="tab2"
         orientation="horizontal"
         flexDirection="column"
         width="100%"

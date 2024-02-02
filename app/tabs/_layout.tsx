@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Tabs, useRouter } from "expo-router";
-import { Button } from "tamagui";
+import { Button, View, Text } from "tamagui";
 
 export default function Layout() {
   const router = useRouter();
@@ -10,7 +10,7 @@ export default function Layout() {
       <Tabs.Screen
         name="tab1"
         options={{
-          title: "The GodFather Trilogy",
+          title: "The GodFather Triloasdasdagy",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
@@ -31,6 +31,30 @@ export default function Layout() {
           }
         }}
       />
+        <Tabs.Screen
+            name="tab2"
+            options={{
+                title: "The Scenes",
+                tabBarIcon(props) {
+                    return (
+                        <MaterialCommunityIcons
+                            name="one-up"
+                            {...props}
+                        />
+                    );
+                },
+                headerLeft() {
+                    return (
+                        <Button
+                            ml="$2.5"
+                            onPress={() => router.push("/")}
+                        >
+                            <MaterialCommunityIcons name="arrow-left" />
+                        </Button>
+                    );
+                }
+            }}
+        />
 
     </Tabs>
   );

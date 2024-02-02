@@ -27,17 +27,11 @@ export default function Home() {
         >
           <H1 textAlign="center">Movie Making</H1>
         </YStack>
-        <YStack>
-          <Image
-              source={{
-                uri: '../assets/Icon-Set-Filled.png',
-                width: 200,
-                height: 300,
-              }}
-          />
+        <YStack justifyContent={"center"}>
+
         </YStack>
-        <YStack space="$2.5">
-          <Button backgroundColor={"#752D59"} onPress={() => router.push("/tabs")}>
+        <YStack space="$2.5" alignItems={"center"}>
+          <Button width={"50%"} backgroundColor={"#752D59"} onPress={() => router.push("/tabs")}>
             Begin
           </Button>
         </YStack>
@@ -51,41 +45,13 @@ export default function Home() {
             <YGroup.Item>
               <Link
                 asChild
-                href="https://twitter.com/natebirdman"
+                href="https://github.com/MiguelCriollo/TercerMomentoFrontEnd"
                 target="_blank"
               >
                 <ListItem
                   hoverTheme
-                  title="Nate"
+                  title="Miguel Criollo"
                   pressTheme
-                  icon={Twitter}
-                />
-              </Link>
-            </YGroup.Item>
-            <YGroup.Item>
-              <Link
-                asChild
-                href="https://github.com/tamagui/tamagui"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  pressTheme
-                  title="Tamagui"
-                  icon={Github}
-                />
-              </Link>
-            </YGroup.Item>
-            <YGroup.Item>
-              <Link
-                asChild
-                href="https://github.com/ivopr/tamagui-expo"
-                target="_blank"
-              >
-                <ListItem
-                  hoverTheme
-                  pressTheme
-                  title="This Template"
                   icon={Github}
                 />
               </Link>
